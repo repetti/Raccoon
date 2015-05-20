@@ -1,0 +1,37 @@
+group 'de.onyxbits'
+version '3.5'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+//artifactId='raccoon'
+mainClassName = 'de.onyxbits.raccoon.App'
+
+repositories {
+    jcenter()
+}
+
+project.ext {
+    httpcomponents_version = '4.2.3'
+    slf4j_version = '1.7.+'
+    junit_version = '4.11'
+}
+
+dependencies {
+
+//    compile group: 'org.slf4j', name: 'slf4j-api', version: slf4j_version
+
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '2.5.0'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.2'
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: httpcomponents_version
+    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: httpcomponents_version
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+
+//    runtime group: 'org.slf4j', name: 'slf4j-simple', version: slf4j_version
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+}
