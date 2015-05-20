@@ -5,6 +5,7 @@ DEADJOE
 *.jar
 *.zip
 *.apk
+*.iml
 bin/
 gen/
 bin/*
@@ -20,3 +21,5 @@ assets/build.properties
 .settings/*
 target/*
 target/
+build/
+.idea/
